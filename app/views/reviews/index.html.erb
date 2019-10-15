@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+<h1>Shame, a site for shaming bad customer service</h1>
+</head>
+<h2>
+<table>
+<thead>
+<tr>
+<th>business</th>
+<th>story</th>
+<th>user</th>
+</tr>
+</thead>
+<tbody>
+<% @reviews.each do |review| %>
+    <tr>
+    <td><%= review.business.name %></td>
+    <td><%= review.story %></td>
+    <td><%= review.user.username %></td>
+    </tr>
+    <% end %>
+</tbody> 
+</table>
+
+</html>
