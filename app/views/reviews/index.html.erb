@@ -5,7 +5,7 @@
  <div class="col-xs-6 col-md-4"> <%= image_tag('finger-point2.jpeg', size: "45x45", class: "rounded") %></div>
 </div>
 
-  <a>A site for documenting poor customer service</a>
+  <a>A site for tracking poor customer service in Atlanta</a>
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -16,6 +16,7 @@
       <tr>
         <th>Business</th>
         <th>Location</th>
+        <th>Associate</th>
         <th>Story</th>
         <th>Shamefulness</th>
         <th>User</th>
@@ -26,6 +27,7 @@
           <tr>
             <td><%= review.business.name %></td>
             <td><%= review.business.address %></td>
+            <td><%= review.associate %></td>
             <td><%= review.story %></td>
             <td><%= review.business.rating %></td>
             <td><%= review.user.username %></td>
