@@ -1,26 +1,37 @@
 <!DOCTYPE html>
+<nav class="navbar bg-dark justify-content-between light-text align-items-center">
+<div class="row">
+<div class="col-xs-6 col-md-4"><a class="navbar-brand">Shame</a></div>
+ <div class="col-xs-6 col-md-4"> <%= image_tag('finger-point2.jpeg', size: "45x45", class: "rounded") %></div>
+</div>
 
-<head>
-<h1>Shame, a site for shaming bad customer service</h1>
-</head>
-<h2>
-<table>
-<thead>
-<tr>
-  <th>Business</th>
-  <th>Story</th>
-  <th>User</th>
-</tr>
-</thead>
-<tbody>
-<% @reviews.each do |review| %>
-    <tr>
-    <td><%= review.business.name %></td>
-    <td><%= review.story %></td>
-    <td><%= review.user.username %></td>
-    </tr>
-    <% end %>
-</tbody> 
-</table>
+  <a>A site for documenting poor customer service</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+  <table class='table table-dark table-striped table-hover'>
+    <thead>
+      <tr>
+        <th>Business</th>
+        <th>Location</th>
+        <th>Story</th>
+        <th>Shamefulness</th>
+        <th>User</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @reviews.each do |review| %>
+          <tr>
+            <td><%= review.business.name %></td>
+            <td><%= review.business.address %></td>
+            <td><%= review.story %></td>
+            <td><%= review.business.rating %></td>
+            <td><%= review.user.username %></td>
+          </tr>
+      <% end %>
+    </tbody> 
+  </table>
 
 </html>

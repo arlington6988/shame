@@ -9,7 +9,35 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
  */
+
+ @import "bootstrap";
+
+header {
+    background-color: grey;
+}
+
+.navbar {
+    min-height: 75px;
+}
+
+.centertext {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0%;
+}
+
+.light-text {
+    color:pink;
+}
+
+.navbar-brand {
+    padding-right: 30px;
+}
