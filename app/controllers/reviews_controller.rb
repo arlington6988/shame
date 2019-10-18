@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-    before_action :set_deploy, only: [:show, :edit, :update, :destroy]
+    before_action :set_review, only: [:show, :edit, :update, :destroy]
 
     def index
       @reviews = Review.all 
@@ -54,7 +54,7 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:story, :business_id, :user_id, :associate, :event_date)
+      params.require(:review).permit(:story, :business_id, :user_id, :associate, :event_date, :address, :business_name)
     end
      
 end
