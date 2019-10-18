@@ -1,6 +1,8 @@
 
+require 'wizard'
 class WizardsController < ApplicationController
-    before_action :load_reviews_wizard, except: %i(validate_step)
+    include Wizard
+    before_action :load_review_wizard, except: %i(validate_step)
   
     def validate_step
       current_step = params[:current_step]

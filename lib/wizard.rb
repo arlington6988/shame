@@ -9,7 +9,7 @@ module Wizard
         delegate *::Review.attribute_names.map { |attr| [attr, "#{attr}="] }.flatten, to: :review
   
         def initialize(review_attributes)
-          @review = ::Review.new(user_attributes)
+          @review = ::Review.new(review_attributes)
         end
       end
   
