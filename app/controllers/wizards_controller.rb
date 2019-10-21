@@ -1,5 +1,6 @@
 
 require 'wizard'
+
 class WizardsController < ApplicationController
     include Wizard
     before_action :load_review_wizard, except: %i(validate_step)
@@ -14,7 +15,6 @@ class WizardsController < ApplicationController
       if @review_wizard.valid?
         next_step = wizard_review_next_step(current_step)
         create and return unless next_step
-  
         redirect_to action: next_step
       else
         render current_step
@@ -47,7 +47,7 @@ class WizardsController < ApplicationController
     end
   
     def review_wizard_params
-      params.require(:review_wizard).permit(:email, :first_name, :last_name, :address_1, :address_2, :zip_code, :city, :country, :phone_number)
+      params.require(:review_wizard).permit(:story, :business_name, :location, :associate, :date, :rating)
     end
   
     class InvalidStep < StandardError; end

@@ -1,6 +1,6 @@
 module Wizard
     module Review
-      STEPS = %w(step1 step2 step3 step4).freeze
+      STEPS = %w(step1 step2 step3).freeze
   
       class Base
         include ActiveModel::Model
@@ -25,8 +25,5 @@ module Wizard
         
       end
   
-      class Step4 < Step3
-        
-      end
     end
   end

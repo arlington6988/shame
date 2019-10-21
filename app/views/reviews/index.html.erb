@@ -25,12 +25,11 @@
     <tbody>
       <% @reviews.each do |review| %>
           <tr>
-            <td><%= review.business.name %></td>
-            <td><%= review.business.address %></td>
+            <td><%= review.business_name %></td>
+            <td><%= review.location %></td>
             <td><%= review.associate %></td>
             <td><%= review.story %></td>
-            <td><%= review.business.rating %></td>
-            <td><%= review.user.username %></td>
+            <td><%= review.rating %></td>
           </tr>
       <% end %>
     </tbody> 
