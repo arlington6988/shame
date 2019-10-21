@@ -1,0 +1,10 @@
+<ol class="breadcrumb">
+  <li class='active'>Step 2</li>
+</ol>
+
+<%= simple_form_for @review_wizard, as: :review_wizard, url: validate_step_wizard_path do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :story %>
+  <%= hidden_field_tag :current_step, 'step2' %>
+  <%= f.submit 'Continue' %>
+<% end %>
